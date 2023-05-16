@@ -1,8 +1,8 @@
-import Card from './Card';
+import Card from '../Card/Card.jsx';
 
 const Cards = ({characters}) => {
    return (
-      <div>
+      <div style={{display:'flex', flexWrap: 'wrap',justifyContent:'center' }}>
       {
          characters.map((char)=>{
             return(
@@ -24,3 +24,4 @@ const Cards = ({characters}) => {
    )
 }
 export default Cards;
+

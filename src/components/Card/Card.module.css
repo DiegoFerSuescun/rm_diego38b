@@ -1,0 +1,67 @@
+/* Contenedor de la card individual  */
+
+.container{
+    border: 3px solid rgb(177, 19, 216);
+    background-color: rgb(13, 223, 13);
+    border-radius: 10px;
+    width: 200px;
+    padding: 10 px;
+    box-shadow: 0 0 10px black;
+    margin: 15px;
+    &:hover{
+        box-shadow: 0 0 20px black;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Contenedor de la imagen */
+
+.image{
+    width: 170px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Contenedor de los botones  */
+
+.contBoton{
+    /* border: 1px solid grey; */
+    display: flex;
+    justify-content: flex-end;
+   
+}
+
+/* Boton de cierre */
+.contBoton button{
+    background-color: rgb(206, 4, 206);
+    color: rgb(221, 255, 0);
+    border: 0px;
+    border-radius: 10px;
+    margin: 3px;
+    width: 25px;
+    &:hover{
+        background-color: red;
+        display: flex;
+        justify-content: flex-end;
+        box-shadow: 0 0 20px black;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Contenedor de las etiquetas en general */
+
+.dataContainer{
+    text-align: center;
+    padding: 10px;
+}
+/* etiquetas h2 */
+.dataContainer h2{
+    margin: 2px;
+    font-size: 25px;
+    color: rgb(221, 255, 0);
+}
+/* etiquetas h4 */
+.dataContainer h4{
+    margin: 2px;
+    font-size: 20px;
+    color: rgb(221, 255, 0);
+}
