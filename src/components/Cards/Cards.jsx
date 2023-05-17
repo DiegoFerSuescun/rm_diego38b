@@ -1,6 +1,6 @@
 import Card from '../Card/Card.jsx';
 
-const Cards = ({characters}) => {
+const Cards = ({characters, onClose}) => {
    return (
       <div style={{display:'flex', flexWrap: 'wrap',justifyContent:'center' }}>
       {
@@ -8,13 +8,14 @@ const Cards = ({characters}) => {
             return(
                <Card
                   key = {char.id}
+                  id = {char.id}
                   name = {char.name}
                   species = {char.species}
                   gender = {char.gender}
                   image = {char.image}
                   origin = {char.origin.name}
                   status = {char.status}
-                  onClose = {() => window.alert('Emulamos que se cierra la card')}
+                  onClose = {onClose}
                />
 
             )
