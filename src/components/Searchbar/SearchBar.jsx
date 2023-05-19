@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './SearchBar.module.css'
 
-const SearchBar = ({onSearch}) => {
+const SearchBar = (props) => {
    const [id, setId] = useState('');
 
   const handleChange = event =>{
@@ -18,7 +18,7 @@ const SearchBar = ({onSearch}) => {
             id='serach'
             onChange={handleChange}
          />
-         <button onClick={() => onSearch(id)}>Agregar</button> 
+         <button onClick={() => props.onSearch(id)}>Agregar</button> 
       </div>
    );
 }
