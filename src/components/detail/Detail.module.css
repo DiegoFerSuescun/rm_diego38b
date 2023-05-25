@@ -1,0 +1,10 @@
+
+.contenedorDetail{
+    background-color: aliceblue;
+    width: 320px;
+    padding: 0px;
+    margin-left: 500px;
+    font: italic;
+    color: black;
+    box-shadow: 20px 20px 20px black;
+}

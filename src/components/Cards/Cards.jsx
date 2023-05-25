@@ -5,9 +5,9 @@ const Cards = ({characters, onClose}) => {
       display: "flex",
       flexWrap: "wrap",
       justifyContent: "space-evenly"
-   }
+}
+   
 
-   console.log(characters);
    return (
       <div style={cardsContainer}>
          {
@@ -23,10 +23,13 @@ const Cards = ({characters, onClose}) => {
                   image={character.image}
                   onClose={() =>onClose (character.id)}
                />
+               
             ))
+            
          }
       </div>
    );
+   
 }
 export default Cards;
 

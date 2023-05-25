@@ -7,7 +7,8 @@ import Cards from './components/Cards/Cards'
 import Detail from './components/detail/Detail';
 import NavBar from './components/nav/NavBar';
 import Form from './components/form/Form';
-// import characters from './data.js';
+import Favorites from './components/favorites/Favorites';
+
 
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
             <Route path='/home' element ={<Cards characters={characters} onClose = {onClose}/>}/>
             <Route path='/about' element = {<About/>}/>
             <Route path='/detail/:detailId' element = {<Detail />}/>
+            <Route path='/favorites' element = {<Favorites onClose = {onClose} />}/>
          </Routes>
       </div>
    );

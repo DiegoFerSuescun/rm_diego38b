@@ -2,14 +2,14 @@
 
 .container{
     border: 3px solid rgb(177, 19, 216);
-    background-color: rgb(13, 223, 13);
+    background-color: rgb(126, 175, 126);
     border-radius: 10px;
     width: 200px;
     padding: 10 px;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 15px black;
     margin: 15px;
     &:hover{
-        box-shadow: 0 0 20px black;
+        box-shadow: 0 0 60px black;
     }
 }
 
@@ -18,6 +18,8 @@
 
 .image{
     width: 170px;
+    border:rgb(177, 19, 216) solid 1px;
+    box-shadow: 0 0 px black;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------ */
@@ -32,17 +34,19 @@
 
 /* Boton de cierre */
 .contBoton button{
-    background-color: rgb(206, 4, 206);
-    color: rgb(221, 255, 0);
+    background-color: blueviolet;
+    color: greenyellow;
+    font: italic;
     border: 0px;
     border-radius: 10px;
     margin: 3px;
     width: 25px;
     &:hover{
-        background-color: red;
+        background-color: violet;
         display: flex;
         justify-content: flex-end;
         box-shadow: 0 0 20px black;
+        margin-right: 7px;
     }
 }
 

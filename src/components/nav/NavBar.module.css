@@ -1,0 +1,20 @@
+
+.barra{
+    background-color: grey;
+    display: flex;
+    justify-content: first first baseline;
+    padding: 3px;
+    padding-top: 25px;
+    padding-left: 140px;
+    padding-right: 120px;
+}
+
+.boton{
+   cursor:pointer;
+   width: 150px; 
+   background-color: blueviolet;
+   color: white;
+   border-radius: 50px;
+}
+
+

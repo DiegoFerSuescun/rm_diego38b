@@ -1,5 +1,6 @@
+import styles from './Detail.module.css'
 import axios from "axios"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { useState, useEffect } from "react";
 
 
@@ -20,14 +21,15 @@ export default function Detail(props){
     
     
     return (
-        <div style={{backgroundColor:'lightgray'}}>
-            
+        <div className={styles.contenedorDetail}>
+
             <h2>{character.name}</h2>
-            <img src={character.image} alt={character.name}  />
             <h3>Species: {character.species}</h3>
             <h3>Gender: {character.gender}</h3>
-
-
+            <h3>Status: {character.status}</h3>
+            <Link to={'/home'}>
+                <img src={character.image} alt={character.name}  />
+            </Link>
         </div>
     )
 }

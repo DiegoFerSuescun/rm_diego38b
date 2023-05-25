@@ -1,4 +1,4 @@
-// import styles from './Form.module.css'
+import styles from './Form.module.css'
 import React from "react";
 import validate from "./validation";
 
@@ -29,27 +29,27 @@ export default function Form(props){
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label>Email:</label>
+        <div className={styles.fondo}>
+            <form className= {styles.container} onSubmit={handleSubmit}>
+                <label className={styles.tituloRick} >RICK & MORTY</label>
+                <label className={styles.etiqEmail}>Email:</label>
                 <input 
                     type='text'
                     name='email'
                     value={userData.email}
                     onChange={handleChange}
                 />
-                <p>{errors.email ? errors.email : null}</p>
+                <p className= {styles.errors}>{errors.email ? errors.email : null}</p>
 
-                <label>Pasword:</label>
+                <label className={styles.etiqPassword}>Pasword:</label>
                 <input 
                     type='password'
                     name='password'
                     value={userData.password}
                     onChange={handleChange}
                 />
-                <p>{errors.password ? errors.password : null}</p>
-                <hr/>
-                <button type="submit">Submit</button>
+                <p className= {styles.errors}>{errors.password ? errors.password : null}</p>
+                <button className={styles.boton} type="submit">Submit</button>
             </form>
         </div>
 

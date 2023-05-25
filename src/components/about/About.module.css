@@ -1,0 +1,11 @@
+.contenedor{
+    border: 2px solid rgb(177, 19, 216);
+    background-color: aliceblue;
+    width: 450px;
+    height: 400px;
+    margin-left: 450px;
+}
+.imagen{
+    width: 300px;
+    border: 1px solid rgb(177, 19, 216);
+}

@@ -11,10 +11,10 @@ export default function validate(input){
         error.email = 'Debe ingresar un email valido';
     }
     if(!input.email){
-        error.email = 'Debe ingresar un Email';
+        error.email = 'Debe ingresar un email "El Campo no puede estar vacio"';
     }
     if(input.email.length > 35){
-        error.email = 'No mayor a 35 caracteres';
+        error.email = 'La longitud del email no puede ser superior a 35 caracteres';
     }
     if(!regexPassword.test(input.password)){
         error.password = 'Debe tener al menos un numero!!!';
