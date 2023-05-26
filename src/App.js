@@ -32,6 +32,9 @@ function App() {
       }, [acces]);
 
    function onSearch (id ) {
+      const characterId = characters.filter(character => character.id === Number(id));
+      if(characterId.length) return alert ("The character exist on list");
+      if(id <1 || id >826) return alert ("This character number does not exist ")
    axios(`https://rickandmortyapi.com/api/character/${id}`)
       .then(({ data }) => {
          if (data.name) {

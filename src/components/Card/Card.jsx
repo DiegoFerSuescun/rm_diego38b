@@ -6,15 +6,8 @@ import { useState, useEffect } from 'react';
 
 
 function Card(props) {
-   const [isFav, setIsFav] =useState(false);
 
-   useEffect(() => {
-      props.myFavorites.forEach((fav) => {
-         if (fav.id === props.id) {
-            setIsFav(true);
-         }
-      });
-   }, [props.myFavorites]);
+   const [isFav, setIsFav] =useState(false);
 
    const handleFavorite = () =>{
       if(isFav){
@@ -25,6 +18,14 @@ function Card(props) {
          props.addFav(props)
       }
    };
+   
+   useEffect(() => {
+      props.myFavorites.forEach((fav) => {
+      if (fav.id === props.id) {
+               setIsFav(true);
+            }
+         });
+      }, [props.myFavorites]);
 
    return (
       <div className = {styles.container}>
@@ -44,7 +45,7 @@ function Card(props) {
          <h4>{props.species}</h4>
          <h4>{props.gender}</h4>
          </div>
-         <h2>{props.origin.name}</h2>
+         {/* <h2>{props.origin.name}</h2> */}
          <Link to = {`/detail/${props.id}`}>
          <img className= {styles.image} src={props.image } alt={props.name} /> 
          </Link>
@@ -52,20 +53,20 @@ function Card(props) {
    );
 };
 
-const mapStateToProps = (state) =>{
-   return {
-      myFavorites: state.myFavorites
-   }
-};
 
 const mapDispatchToProps = (dispatch)=>{
    return {
       addFav: (character) =>dispatch(addFav(character)),
       removeFav: (id)=> dispatch(removeFav(id))
-      }
- }
+   }
+}
 
- export default connect(mapStateToProps, mapDispatchToProps)(Card);
+const mapStateToProps = (state) =>{
+   return {
+      myFavorites: state.myFavorites
+   }
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Card);
 
 
 
