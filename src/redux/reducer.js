@@ -26,7 +26,7 @@ export default function reducer  (state = initialState, {type, payload}){
      case FILTER:
         if(payload === 'ALL')return {
             ...state,
-            myFavorites: state.allCharacters
+            myFavorites:state.allCharacters
         }
         const allCharactersCopy = [...state.allCharacters];
         const filteredCharacter = allCharactersCopy.filter(character => character.gender === payload);

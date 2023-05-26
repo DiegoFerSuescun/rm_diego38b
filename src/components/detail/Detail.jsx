@@ -28,7 +28,7 @@ export default function Detail(props){
             <h3>Gender: {character.gender}</h3>
             <h3>Status: {character.status}</h3>
             <Link to={'/home'}>
-                <img src={character.image} alt={character.name}  />
+                <img src={character.image} alt={character.name}  className={styles.image} />
             </Link>
         </div>
     )

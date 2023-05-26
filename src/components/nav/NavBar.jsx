@@ -11,11 +11,14 @@ export default function NavBar(props) {
          <button className={styles.boton}>HOME</button>
          </NavLink>
 
+         <div>
          <NavLink to = "/favorites">
          <button className={styles.boton} >FAVORITES</button>
          </NavLink>
+         </div>
+        
 
-         <SearchBar onSearch={props.onSearch} />
+         <SearchBar className={styles.search} onSearch={props.onSearch}  />
          
          <NavLink to="/about">
          <button className={styles.boton}>ABOUT</button>

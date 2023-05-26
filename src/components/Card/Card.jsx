@@ -40,10 +40,10 @@ function Card(props) {
          <button onClick={ props.onClose}>X</button>
          </div>
          <div className={styles.dataContainer}>
-         <h2>{props.name}</h2>
-         <h4>{props.status} </h4>
-         <h4>{props.species}</h4>
-         <h4>{props.gender}</h4>
+         <h4>Name: {props.name}</h4>
+         <h4>Status:{props.status} </h4>
+         <h4>Specie:{props.species}</h4>
+         <h4>Gender:{props.gender}</h4>
          </div>
          {/* <h2>{props.origin.name}</h2> */}
          <Link to = {`/detail/${props.id}`}>
