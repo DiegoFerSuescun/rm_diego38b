@@ -1,0 +1,20 @@
+
+.contenedorDetail{
+    background-color:rgb(126, 175, 126);
+    border: 9px solid rgb(177, 19, 216);
+    border-radius: 10px;
+    width: 320px;
+    height: 480px;
+    padding: 0px;
+    margin-left: 500px;
+    font: italic;
+    color: greenyellow;
+    box-shadow: 20px 20px 20px black;
+}
+.image{
+    width: 290px;
+    height: 260px;
+    border: 3px solid rgb(177, 19, 216);
+    border-radius: 10px;
+
+}
