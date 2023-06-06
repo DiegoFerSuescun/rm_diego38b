@@ -1,18 +1,27 @@
-import { FILTER, ORDER } from "./types";
-
+import { FILTER, ORDER, ADD_FAV, REMOVE_FAV } from "./types";
+ 
 
 const initialState = {
     myFavorites:[],
-    allCharacters:[]
+    allCharacters:[],
+    errors: {},
 }
 
 export default function reducer  (state = initialState, {type, payload}){
-
     switch(type){
-     case 'ADD_FAV':
-            return { ...state, myFavorites: payload, allCharacters: payload };
-     case 'REMOVE_FAV':
-            return { ...state, myFavorites: payload };
+     case ADD_FAV:
+            return {
+                 ...state, 
+                 myFavorites: payload, 
+                 allCharacters: payload, 
+                 errors: {}
+            };
+     case REMOVE_FAV:
+            return {
+                 ...state, 
+                 myFavorites: payload, 
+                 errors: {}
+            };
      case FILTER:
         if(payload === 'ALL')return {
             ...state,
@@ -39,6 +48,12 @@ export default function reducer  (state = initialState, {type, payload}){
             ...state,
             myFavorites: orderedCharacter
         }
+    case 'ERROR':{
+        return {
+            ...state,
+            errors: payload,
+        };
+    }
      default:
         return {
             ...state

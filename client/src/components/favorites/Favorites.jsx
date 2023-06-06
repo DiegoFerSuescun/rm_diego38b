@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 const Favorites = ({myFavorites , onClose}) =>{
 
-   console.log(myFavorites);
+   
    const [aux, setAux] = useState(false);
 
    const dispatch = useDispatch();
@@ -21,6 +21,7 @@ const Favorites = ({myFavorites , onClose}) =>{
    const handleFilter = (event) =>{
       dispatch(filterCards(event.target.value));
    }
+   console.log(myFavorites);
    return(
          <div>
             <select name="order" onChange={handleOrder}>
